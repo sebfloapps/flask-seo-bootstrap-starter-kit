@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ page_title|default('About | Your Site Name') }}
+{% endblock %}
+
+{% block content %}
+  <div class="py-5">
+    <div class="container">
+      <h1 class="mb-4">About {{ site_name|default('Your Site Name') }}</h1>
+
+      <p class="lead">
+        {{ site_name|default('Your Site Name') }} is a modern web application built with Flask, Bootstrap, and SEO-ready templates.
+      </p>
+
+      <hr class="my-4">
+
+      <h2 class="h4 mt-4">Our Mission</h2>
+      <p>
+        Our goal is to provide a clean, fast, and scalable starter kit so you can launch new ideas quickly without
+        rebuilding the same boilerplate over and over.
+      </p>
+
+      <h2 class="h4 mt-4">Tech Stack</h2>
+      <ul>
+        <li>Flask + Jinja2 for server-side rendering</li>
+        <li>Bootstrap 5 via CDN for responsive UI</li>
+        <li>SEO-optimized base template with Open Graph and Twitter cards</li>
+      </ul>
+
+      <h2 class="h4 mt-4">Get in Touch</h2>
+      <p>
+        Have questions or want to extend this starter? Reach out at
+        <a href="mailto:info@yoursite.com">info@yoursite.com</a>.
+      </p>
+    </div>
+  </div>
+{% endblock %}
