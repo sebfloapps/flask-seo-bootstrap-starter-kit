@@ -1,8 +1,112 @@
 {% extends "base.html" %}
 
 {% block title %}{{ page_title }}{% endblock %}
+{% block meta_description %}{{ meta_description }}{% endblock %}
 
 {% block content %}
-<h1>Welcome to {{ site_name }}</h1>
-<p>This page includes custom SEO meta values.</p>
+<div class="container py-5">
+
+  <!-- HERO -->
+  <section class="row align-items-center mb-5">
+    <div class="col-md-7">
+      <h1 class="display-5 fw-bold mb-3">
+        Flask SEO Bootstrap Starter Kit
+      </h1>
+
+      <p class="lead mb-4">
+        A lightweight starting point for building clean Flask apps with built-in
+        SEO support and a Bootstrap 5 layout.
+      </p>
+
+      <div class="d-flex gap-2">
+        <a class="btn btn-primary"
+           target="_blank"
+           href="https://github.com/sebfloapps/flask-seo-bootstrap-starter-kit">
+          View on GitHub
+        </a>
+
+        <a class="btn btn-outline-secondary"
+           href="{{ url_for('contact') }}">
+          Contact
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-5 mt-4 mt-md-0">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5 mb-3">What’s Included</h2>
+          <ul class="mb-0">
+            <li>SEO-ready template structure</li>
+            <li>Bootstrap 5 UI base</li>
+            <li>Clean Flask routing</li>
+            <li>Minimal and extendable layout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="mb-5">
+    <h2 class="h4 mb-4">Core Focus</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h6">SEO Friendly</h3>
+            <p class="mb-0">
+              Title, description, and social meta blocks are built in from the
+              start so you can tune pages easily.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h6">Bootstrap 5 Layout</h3>
+            <p class="mb-0">
+              Responsive styles and basic components ready to customize for any UI.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h6">Simple Structure</h3>
+            <p class="mb-0">
+              Clean routing and templates designed to scale without turning messy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="border-top pt-4 text-center">
+    <h2 class="h4 mb-3">
+      Clone it and start building your next project
+    </h2>
+
+    <p class="mb-4">
+      This kit is meant to save setup time so you can focus on building real
+      features.
+    </p>
+
+    <a class="btn btn-primary"
+       target="_blank"
+       href="https://github.com/sebfloapps/flask-seo-bootstrap-starter-kit">
+      Get the Code
+    </a>
+  </section>
+
+</div>
 {% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <h1 class="mb-4">Contact</h1>
+
+  <p class="mb-4">
+    This is a simple contact page template. Hook this up to email, a ticketing
+    system, or database storage depending on your project needs.
+  </p>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="mb-3">
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <form method="post">
+
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input class="form-control" type="text" name="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input class="form-control" type="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="5" name="message" required></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

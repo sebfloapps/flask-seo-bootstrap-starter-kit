@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}404 – Page Not Found{% endblock %}
+{% block meta_description %}
+Sorry, the page you are looking for does not exist.
+{% endblock %}
+
+{% block content %}
+<div class="container py-5 text-center">
+
+  <div class="mb-4">
+    <h1 class="display-3 fw-bold">404</h1>
+    <p class="lead mb-2">
+      Well… this page took a wrong turn.
+    </p>
+    <p class="text-muted">
+      The route you're looking for doesn’t exist — or it was moved.
+    </p>
+  </div>
+
+  <div class="d-flex justify-content-center gap-2 mb-4">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">
+      Back Home
+    </a>
+    <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary">
+      Contact
+    </a>
+  </div>
+
+  <small class="text-muted">
+    Tip: Check your URL or head back to something that exists.
+  </small>
+
+</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Register – Flask SEO Bootstrap Starter Kit{% endblock %}
+{% block meta_description %}
+Basic registration UI template for the Flask SEO Bootstrap Starter Kit.
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-2">Create Account</h1>
+        <p class="text-muted">
+          This is a simple UI template — hook this up to your authentication
+          logic as needed.
+        </p>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+
+          <form>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="you@example.com"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter password"
+                required
+              >
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Confirm password"
+                required
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Register
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <small class="text-muted">
+          Already have an account?
+          <a href="{{ url_for('login') }}">Login</a>
+        </small>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
