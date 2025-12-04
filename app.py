@@ -81,7 +81,7 @@ def contact():
             flash("Please fill out all fields.", "danger")
             return redirect(url_for("contact"))
 
-        # TODO: Wire into email or database later
+        # Wire into email or database later
         flash("Thanks for reaching out. Your message has been received.", "success")
         return redirect(url_for("contact"))
 
