@@ -22,14 +22,8 @@ No heavy frameworks, no over-engineering — just a solid starting point that mi
 
 ## Roadmap
 
-Right now this is focused on core structure and layout only. As I continue to build on it over time, I plan to add:
+Right now this is focused on core structure and layout only. As I continue to build on it over time, I plan to add more sample pages and example models.
 
-- Authentication (login/registration)
-- Contact forms
-- Dashboard layouts
-- User roles
-- API scaffolding
-- Example data models
 
 The goal is to keep expanding without turning it into bloated boilerplate.
 
